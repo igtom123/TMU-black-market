@@ -179,13 +179,13 @@ body {
 }
 
 #product1 .pro-container {
-  dipaly: flex;
-  gap: 20px;
+  display: flex;
+  gap: 10px;
 }
 #product1 .column {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
 #product1 .pro {
@@ -206,14 +206,27 @@ body {
 
 #product1 .pro img {
   width: 100%;
-  border-radius: 20px;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
 }
-#product1 .pro .des,
-span {
+#product1 .pro .des {
   text-align: start;
   padding: 10px 0;
   color: goldenrod;
+  overflow: hidden; /* Prevent text overflow */
+  text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+  white-space: normal; /* Allow text wrapping */
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 100%;
+  z-index: 1;
 }
+
 #product1 .pro .des h5 {
   padding-top: 7px;
   color: #1a1a1a;
@@ -229,25 +242,10 @@ span {
   font-weight: 700;
   color: #088178;
 }
-#product1 .pro .cart {
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 50px;
-  font-weight: 500;
-  color: #088178;
-  background-color: #cdd4f8;
-  border: 1px solid #cce7de;
-  position: absolute;
-  bottom: 20px;
-  right: 10px;
-}
-
-#product1.pro-container {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 20px;
-  flex-wrap: wrap;
+@media (max-width: 768px) {
+  #product1 .pro-container {
+    flex-direction: column;
+  }
 }
 
 #banner {
@@ -256,7 +254,7 @@ span {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url(banner/pexels-eberhardgross-3389618.jpg);
+  background-image: url(../images/pexels-eberhardgross-3389618.jpg);
   width: 100%;
   height: 40vh;
   background-size: cover;
@@ -289,7 +287,7 @@ span {
   justify-content: center;
   align-items: center;
   align-items: flex-start;
-  background-image: url("arrivals/shoe3.jpg");
+  background-image: url("../images/shoe3.jpg");
   min-width: 580px;
   height: 80vh;
   background-size: cover;
@@ -302,7 +300,7 @@ span {
   justify-content: center;
   align-items: center;
   align-items: flex-start;
-  background-image: url("arrivals/shoe.jpg");
+  background-image: url("../images/shoe.jpg");
   min-width: 580px;
   height: 80vh;
   background-size: cover;
@@ -348,7 +346,7 @@ span {
   justify-content: center;
   align-items: center;
   align-items: flex-start;
-  background-image: url("products/purse.jpg");
+  background-image: url("../images/purse.jpg");
   min-width: 30%;
   height: 30vh;
   background-size: cover;
@@ -372,7 +370,7 @@ span {
   justify-content: center;
   align-items: center;
   align-items: flex-start;
-  background-image: url("arrivals/shoe4.jpg");
+  background-image: url("../images/shoe4.jpg");
   min-width: 30%;
   height: 30vh;
   background-size: cover;
@@ -386,7 +384,7 @@ span {
   justify-content: center;
   align-items: center;
   align-items: flex-start;
-  background-image: url("products/lapi2.jpg");
+  background-image: url("../images/lapi2.jpg");
   min-width: 30%;
   height: 30vh;
   background-size: cover;
