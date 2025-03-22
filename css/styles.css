@@ -79,7 +79,15 @@ body {
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 1000;
 }
+
+.logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
 #navbar {
   display: flex;
   align-items: center;
@@ -118,6 +126,108 @@ body {
 #mobile {
   display: none;
   align-items: center;
+}
+
+
+/* Shop Now Section */
+#shop-now {
+  padding: 40px 80px;
+}
+
+#shop-now h2 {
+  font-size: 46px;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+#shop-now p {
+  font-size: 16px;
+  color: #465b52;
+  margin-bottom: 40px;
+}
+
+/* Product Grid */
+#shop-now .pro-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Individual Product Styling */
+#shop-now .pro {
+  background-color: #fff;
+  border: 1px solid #cce7de;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+/* Hover Effect */
+#shop-now .pro:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Product Image */
+#shop-now .pro img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Product Description */
+#shop-now .pro .des {
+  text-align: center;
+  margin-top: 10px;
+}
+#shop-now .pro .des span {
+  font-size: 12px;
+  color: #088178;
+}
+#shop-now .pro .des h5 {
+  font-size: 16px;
+  margin: 5px 0;
+}
+#shop-now .pro .des h4 {
+  font-size: 18px;
+  color: #088178;
+  font-weight: bold;
+}
+
+/* Star Rating */
+#shop-now .pro .star {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+}
+#shop-now .pro .star i {
+  color: gold;
+  font-size: 14px;
+}
+
+/* Add-to-Cart Button */
+#shop-now .pro a {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color: #088178;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#shop-now .pro a:hover {
+  background-color: #055c53;
 }
 
 #hero {
@@ -188,9 +298,10 @@ body {
 }
 
 #product1 .pro-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 10px;
+  margin-top: 20px;
 }
 #product1 .column {
   display: flex;
@@ -199,63 +310,84 @@ body {
 }
 
 #product1 .pro {
-  width: 23%;
-  min-width: 250px;
-  padding: 10px 12px;
+  background-color: #fff;
   border: 1px solid #cce7de;
-  border-radius: 25px;
-  cursor: pointer;
-  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
-  margin: 5px 0;
-  transition: 0.2s ease;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
 }
+#product1 .pro a {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color: #088178;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#product1 .pro a:hover {
+  background-color: #055c53;
+}
 #product1 .pro:hover {
-  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.09);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 #product1 .pro img {
   width: 100%;
-  height: 100%;
-  border-radius: 5px;
+  height: auto;
+  border-radius: 10px;
   object-fit: cover;
-  position: relative;
-  z-index: 1;
 }
 #product1 .pro .des {
-  text-align: start;
-  padding: 10px 0;
-  color: goldenrod;
-  overflow: hidden; /* Prevent text overflow */
-  text-overflow: ellipsis; /* Add ellipsis for overflowing text */
-  white-space: normal; /* Allow text wrapping */
-  position: absolute;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  width: 100%;
-  z-index: 1;
+  text-align: center;
+  margin-top: 10px;
+}
+#product .pro .des span{
+  font-size: 12px;
+  color: #088178;
 }
 
 #product1 .pro .des h5 {
-  padding-top: 7px;
-  color: #1a1a1a;
-  font-size: 14px;
+  font-size: 16px;
+  margin: 5px 0;
 }
 #product1 .pro .des i {
   font-size: 12px;
   color: rgba(243, 181, 25);
 }
 #product1 .pro .des h4 {
-  padding-top: 7px;
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: bold;
   color: #088178;
 }
 @media (max-width: 768px) {
   #product1 .pro-container {
     flex-direction: column;
   }
+}
+.icon {
+  display: flex;
+  gap: 15px;
+}
+
+.icon i {
+  font-size: 24px;
+  color: #333;
+  transition: color 0.3s ease; 
+}
+
+.icon i:hover {
+  color: #088178;
 }
 
 #banner {
@@ -516,4 +648,64 @@ footer .copyright {
   color: #1a1a1a;
   font-size: 24px;
   padding-left: 20px;
+}
+
+#login {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#login h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#login form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#login label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#login input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#login button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #088178;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#login button:hover {
+  background-color: #055c53;
+}
+
+#login p {
+  text-align: center;
+  margin-top: 15px;
+}
+
+#login p a {
+  color: #088178;
+  text-decoration: none;
+}
+
+#login p a:hover {
+  text-decoration: underline;
 }
