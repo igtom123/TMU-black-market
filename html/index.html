@@ -17,49 +17,31 @@
   </head>
 
   <body>
-    <section id="header">
-      <a href="#"
-        ><img
-          src="../images/original-45a3c273b284f96c3a8925476a654aca.png"
-          alt="logo"
-          style="
-            height: 50px;
-            background-color: #e3e6f3;
-            position: sticky;
-            top: 0;
-          "
-      /></a>
-
-      <div>
+    <header id="header">
+      <a href="#"><img src="../images/original-45a3c273b284f96c3a8925476a654aca.png" alt="logo" class="logo" /></a>
+      <nav>
         <ul id="navbar">
-          <li><a class="active" href="tm.html">Home</a></li>
-          <li><a class="active" href="shop.html">Shop</a></li>
-          <li><a class="active" href="blog.html">Blog</a></li>
-          <li><a class="active" href="about.html">About</a></li>
-          <li><a class="active" href="contact.html">Contact</a></li>
-          <li>
-            <a class="active" href="cart.html"
-              ><i class="fas fa-shopping-basket" aria-hidden="true"></i
-            ></a>
-          </li>
+          <li><a href="tm.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.html"><i class="fas fa-shopping-basket" aria-hidden="true"></i></a></li>
         </ul>
-      </div>
-
+      </nav>
       <div id="mobile">
         <i id="bar" class="fas fa-outdent"></i>
-        <a class="active" href="cart.html">
-          <i class="fas fa-shopping-basket" aria-hidden="true"></i>
-        </a>
+        <a href="cart.html"><i class="fas fa-shopping-basket" aria-hidden="true"></i></a>
       </div>
-    </section>
-
+    </header>
+    <main>
     <section id="hero">
       <h4>Trade-in-offer</h4>
       <h2>T.M.U Black Market</h2>
       <h4>Brings you a 10% Discount</h4>
       <h1>On all products</h1>
       <p>Save more with coupons & up to 70% off!</p>
-      <button>Shop Now</button>
+      <button id="shop-now">Shop Now</button>
     </section>
 
     <div class="carousel" data-flickity='{ "lazyLoad": true }'>
@@ -293,13 +275,13 @@
         <button class="normal">Sign Up</button>
       </div>
     </section>
-
+  </main>
     <footer class="section-p1">
       <div class="col">
         <img
           class="logo"
           src="../images/original-45a3c273b284f96c3a8925476a654aca.png"
-          style="height: 20vh"
+          alt="logo"
         />
         <h4>Contact</h4>
         <p><strong>Address:</strong> Nairobi kenya opposite Koinange street</p>
@@ -335,8 +317,7 @@
         <a href="#">Help</a>
       </div>
 
-      <div class="copyright"></div>
-      <p>Group 4</p>
+      <div class="copyright"> <p>&copy; 2023 Group 4</p></div>
     </footer>
 
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>

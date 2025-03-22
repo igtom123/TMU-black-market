@@ -1,0 +1,110 @@
+const bar = document.getElementById("bar");
+const nav = document.getElementById("navbar");
+
+if (bar) {
+  bar.addEventListener("click", () => {
+    nav.classList.add("active");
+  });
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener("click", (e) => {
+  if (nav && nav.classList.contains("active") && e.target !== bar && !nav.contains(e.target)) {
+    nav.classList.remove("active");
+  }
+});
+// Carousel functionality
+document.addEventListener("DOMContentLoaded", () => {
+  const carouselTrack = document.querySelector('.carousel-track');
+  const slides = document.querySelectorAll('.carousel-slide');
+  const prevButton = document.querySelector('.prev-arrow');
+  const nextButton = document.querySelector('.next-arrow');
+  
+  if (!carouselTrack || !slides.length) return;
+  
+  let currentIndex = 0;
+  const slideCount = slides.length;
+  let slideWidth = slides[0].offsetWidth + 20; // slide width + margin
+  let autoScrollInterval;
+  let isDragging = false;
+  let startX, startPos;
+  
+  // Initialize the carousel
+  function initCarousel() {
+    slideWidth = slides[0].offsetWidth + 20; // Recalculate on resize
+    updateCarousel();
+    startAutoScroll();
+  }
+  
+  // Function to update carousel position and active states
+  function updateCarousel() {
+    // Set transform to position the current slide in the center
+    const position = -currentIndex * slideWidth;
+    carouselTrack.style.transform = `translateX(${position}px)`;
+    
+    // Update active class
+    slides.forEach((slide, index) => {
+      slide.classList.remove('active');
+      if (index === currentIndex) {
+        slide.classList.add('active');
+      }
+    });
+  }
+  
+  // Move to next slide
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slideCount;
+    updateCarousel();
+  }
+  
+  // Move to previous slide
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+    updateCarousel();
+  }
+  
+  // Start auto-scrolling
+  function startAutoScroll() {
+    stopAutoScroll(); // Clear any existing interval
+    autoScrollInterval = setInterval(nextSlide, 3000);
+  }
+  
+  // Stop auto-scrolling
+  function stopAutoScroll() {
+    if (autoScrollInterval) {
+      clearInterval(autoScrollInterval);
+    }
+  }
+  
+  // Event listeners for buttons
+  if (prevButton) {
+    prevButton.addEventListener('click', () => {
+      prevSlide();
+      stopAutoScroll();
+      startAutoScroll(); // Reset the timer
+    });
+  }
+  
+  if (nextButton) {
+    nextButton.addEventListener('click', () => {
+      nextSlide();
+      stopAutoScroll();
+      startAutoScroll(); // Reset the timer
+    });
+  }
+  
+  // Touch/mouse events for dragging
+  carouselTrack.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startX = e.pageX;
+    startPos = parseFloat(carouselTrack.style.transform.replace('translateX(', '').replace('px)', '')) || 0;
+    stopAutoScroll();
+  });
+  
+  carouselTrack.addEventListener('touchstart', (e) => {
+    isDragging = true;
+    startX = e.touches[0].pageX;
+    startPos = parseFloat(carouselTrack.style.transform.replace('translateX(', '').replace('px)', '')) || 0;
+    stopAutoScroll();
+  });
+  
