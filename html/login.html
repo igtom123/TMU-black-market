@@ -10,88 +10,64 @@
   <body>
     <!-- Header -->
     <header id="header">
-      <a href="index.html">
-        <img
-          src="../images/original-45a3c273b284f96c3a8925476a654aca.png"
-          alt="logo"
-          class="logo"
-        />
-      </a>
-      <nav>
-        <ul id="navbar">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="shop.html">Shop</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="cart.html"><i class="fas fa-shopping-basket"></i></a></li>
-        </ul>
-      </nav>
-      <div id="mobile">
-        <i id="bar" class="fas fa-outdent"></i>
-        <a href="cart.html"><i class="fas fa-shopping-basket"></i></a>
+      <div class="container">
+        <a href="#" class="logo">
+          <img
+            src="../images/original-45a3c273b284f96c3a8925476a654aca.png"
+            alt="TMU Black Market Logo"
+            style="height: 50px; background-color: #e3f6fe"
+          />
+        </a>
+        <nav>
+          <ul id="navbar" aria-label="Main Navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
     <!-- Login Form -->
     <section id="login" class="section-p1">
-      <h2>Login</h2>
-      <form id="loginForm">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required />
-
-        <button type="submit">Login</button>
-      </form>
-      <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+      <div class="container">
+        <h2>Log In</h2>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="login-email">Email Address</label>
+            <input
+              type="email"
+              id="login-email"
+              name="email"
+              required
+              placeholder="Enter your email address"
+            />
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input
+              type="password"
+              id="login-password"
+              name="password"
+              required
+              placeholder="Enter your password"
+            />
+          </div>
+          <button type="submit" class="btn-primary">Log In</button>
+        </form>
+        <p>Don't have an account? <a href="signup.html">Sign up here</a>.</p>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="section-p1">
       <div class="col">
-        <img
-          class="logo"
-          src="../images/original-45a3c273b284f96c3a8925476a654aca.png"
-          alt="logo"
-        />
-        <h4>Contact</h4>
-        <p><strong>Address:</strong> Nairobi, Kenya opposite Koinange Street</p>
-        <p><strong>Phone:</strong> +254 740529969, +254 790494623</p>
-        <p><strong>Hours:</strong> 8:00 - 10:00, Mon - Sat</p>
-        <div class="follow">
-          <h4>Follow Us</h4>
-          <div class="icon">
-            <i class="fas fa-facebook-f"></i>
-            <i class="fas fa-twitter"></i>
-            <i class="fas fa-instagram"></i>
-            <i class="fas fa-pinterest-p"></i>
-            <i class="fas fa-youtube"></i>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <h4>About</h4>
-        <a href="#">About us</a>
-        <a href="#">Delivery Information</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms & Conditions</a>
-        <a href="#">Contact Us</a>
-      </div>
-      <div class="col">
-        <h4>My Account</h4>
-        <a href="#">Sign Up</a>
-        <a href="#">View Cart</a>
-        <a href="#">My Wishlist</a>
-        <a href="#">Track my order</a>
-        <a href="#">Help</a>
-      </div>
-      <div class="copyright">
         <p>&copy; 2023 Group 4</p>
       </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="../js/script.js"></script>
   </body>
 </html>

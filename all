@@ -445,7 +445,7 @@ body {
 
 .filter-section {
   display: flex;
-  align-items: center;
+  justify-content: center;
   gap: 10px;
   margin-bottom: 20px;
 }
@@ -468,80 +468,7 @@ body {
   background-color: #0056b3;
   color: white;
 }
-##category-filter {
-  padding: 8px 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-#category-filter:focus {
-  outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-
-/* General Form Styles */
-#signup {
-  padding: 50px 0;
-  text-align: center;
-}
-
-#signup h2 {
-  margin-bottom: 20px;
-  font-size: 2rem;
-}
-
-#signup .form-group {
-  margin-bottom: 15px;
-  text-align: left;
-}
-
-#signup label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-#signup input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-#signup button {
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-#signup button:hover {
-  background-color: #0056b3;
-}
-
-#signup p {
-  margin-top: 15px;
-  font-size: 0.9rem;
-}
-
-#signup a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-#signup a:hover {
-  text-decoration: underline;
-}
-
-banner {
+#banner {
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -18,65 +18,98 @@
   <body>
     <!-- Header -->
     <header id="header">
-      <a href="index.html">
-        <img
-          src="../images/original-45a3c273b284f96c3a8925476a654aca.png"
-          alt="logo"
-          class="logo"
-        />
-      </a>
-      <nav>
-        <ul id="navbar">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="shop.html" class="active">Shop</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li>
-            <a href="cart.html"><i class="fas fa-shopping-basket"></i></a>
-          </li>
-        </ul>
-      </nav>
-      <div id="mobile">
-        <i id="bar" class="fas fa-outdent"></i>
-        <a href="cart.html"><i class="fas fa-shopping-basket"></i></a>
+      <div class="container">
+        <a href="#" class="logo">
+          <img
+            src="../images/original-45a3c273b284f96c3a8925476a654aca.png"
+            alt="TMU Black Market Logo"
+            style="height: 50px; background-color: #e3f6fe"
+          />
+        </a>
+        <nav>
+          <ul id="navbar" aria-label="Main Navigation">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+              <a href="cart.html" class="cart-icon" aria-label="Shopping Cart">
+                <i class="fas fa-shopping-basket" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="search-bar">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search products..."
+            aria-label="Search products"
+          />
+          <button id="search-button" aria-label="Search">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        <div id="mobile" aria-label="Mobile Navigation">
+          <button id="mobile-menu-toggle" aria-label="Toggle Mobile Menu">
+            <i id="bar" class="fas fa-bars"></i>
+          </button>
+          <a href="cart.html" class="cart-icon" aria-label="Shopping Cart">
+            <i class="fas fa-shopping-basket" aria-hidden="true"></i>
+          </a>
+        </div>
       </div>
     </header>
 
+    <div class="filter-section">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="shoes">Shoes</button>
+      <button class="filter-btn" data-category="electronics">
+        Electronics
+      </button>
+      <button class="filter-btn" data-category="bag">Bags</button>
+      <button class="filter-btn" data-category="bedroom">Bedroom</button>
+      <button class="filter-btn" data-category="kitchen">Kitchen</button>
+    </div>
     <!-- Shop Page Content -->
-     <main>
-    <section id="shop-now" class="section-p1">
-      <h2>All Products</h2>
-      <p>Browse through our wide selection of products</p>
-      <div class="pro-container">
-        <!-- Product Items -->
-        <div class="pro">
-          <img src="../images/shoe.jpg" alt="Adidas Sneakers" />
-          <div class="des">
-            <span>Shoes</span>
-            <h5>Adidas Sneakers</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
+    <main>
+      <section id="shop-now" class="section-p1">
+        <h2>All Products</h2>
+        <p>Browse through our wide selection of products</p>
+        <div class="pro-container">
+          <!-- Product Items -->
+          <div class="pro">
+            <img src="../images/shoe.jpg" alt="Adidas Sneakers" />
+            <div class="des">
+              <span class="category">Shoes</span>
+              <h5>Adidas Sneakers</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+              </div>
+              <h4>$78</h4>
             </div>
-            <h4>$78</h4>
+            <a href="#"><i class="fas fa-shopping-cart"></i></a>
           </div>
-          <a href="#"><i class="fas fa-shopping-cart"></i></a>
-        </div>
-        <div class="pro">
-          <img src="../images/1-2024-02-13T025006.553-1024x1024.jpg" alt="Kettle" />
-          <div class="des">
-            <span>Kitchen</span>
-            <h5>OraimoElectric Kettle</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
+          <div class="pro">
+            <img
+              src="../images/1-2024-02-13T025006.553-1024x1024.jpg"
+              alt="Kettle"
+            />
+            <div class="des">
+              <span ="category">Kitchen</span>
+              <h5>OraimoElectric Kettle</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+              </div>
+              <h4>$20</h4>
             </div>
-            <h4>$20</h4>
+            <a href="#"><i class="fas fa-shopping-cart"></i></a>
           </div>
-          <a href="#"><i class="fas fa-shopping-cart"></i></a>
-        </div>
-        <div class="pro">
+          <div class="pro">
             <img src="../images/5-by-6-mahogany-bed.png" alt="bed" />
             <div class="des">
-              <span>Bedroom</span>
+              <span class="category">Bedroom</span>
               <h5>5x6 Mahogany Bed</h5>
               <div class="star">
                 <i class="fas fa-star"></i>
@@ -88,7 +121,7 @@
           <div class="pro">
             <img src="../images/7109i1hDaNS.jpg" alt=" Laptop" />
             <div class="des">
-              <span>Electronic</span>
+              <span class="category">Electronic</span>
               <h5>Hp Probook Laptop</h5>
               <div class="star">
                 <i class="fas fa-star"></i>
@@ -100,7 +133,7 @@
           <div class="pro">
             <img src="../images/a1.png" alt="phone" />
             <div class="des">
-              <span>Electronic</span>
+              <span class="category">Electronic</span>
               <h5>Samsung S10</h5>
               <div class="star">
                 <i class="fas fa-star"></i>
@@ -112,7 +145,7 @@
           <div class="pro">
             <img src="../images/a3.png" alt="Phone" />
             <div class="des">
-              <span>Electronic</span>
+              <span class="category">Electronic</span>
               <h5>Iphone 12</h5>
               <div class="star">
                 <i class="fas fa-star"></i>
@@ -124,7 +157,7 @@
           <div class="pro">
             <img src="../images/a4.png" alt="Shoe" />
             <div class="des">
-              <span>Shoes</span>
+              <span class="category">Shoes</span>
               <h5>Air Force</h5>
               <div class="star">
                 <i class="fas fa-star"></i>
@@ -136,7 +169,7 @@
           <div class="pro">
             <img src="../images/a6.jpg" alt="Kettle" />
             <div class="des">
-              <span>Kitchen</span>
+              <span class="category">Kitchen</span>
               <h5>Electric Kettle</h5>
               <div class="star">
                 <i class="fas fa-star"></i>
@@ -148,7 +181,7 @@
           <div class="pro">
             <img src="../images/b2.jpg" alt="gift bag" />
             <div class="des">
-              <span>Bag</span>
+              <span class="category">Bag</span>
               <h5>Gift Bag</h5>
               <div class="star">
                 <i class="fas fa-star"></i>
@@ -160,7 +193,7 @@
           <div class="pro">
             <img src="../images/b5.jpg" alt="Camera" />
             <div class="des">
-              <span>Electronic</span>
+              <span class="category">Electronics</span>
               <h5>Canon EOS R6 Mark II</h5>
               <div class="star">
                 <i class="fas fa-star"></i>
@@ -172,7 +205,7 @@
           <div class="pro">
             <img src="../images/bag.jpg" alt="bag" />
             <div class="des">
-              <span>Bag</span>
+              <span class="category">Bag</span>
               <h5>Yellow Diodara Purse</h5>
               <div class="star">
                 <i class="fas fa-star"></i>
@@ -184,8 +217,8 @@
           <div class="pro">
             <img src="../images/camera.jpg" alt="camera" />
             <div class="des">
-              <span>Electronic</span>
-              <h5> Nikon D780</h5>
+              <span class="category">Electronic</span>
+              <h5>Nikon D780</h5>
               <div class="star">
                 <i class="fas fa-star"></i>
               </div>
@@ -196,7 +229,7 @@
           <div class="pro">
             <img src="../images/f5.jpg" alt="Pillow" />
             <div class="des">
-              <span>Bedroom</span>
+              <span class="category">Bedroom</span>
               <h5>White 1Kg Pillow</h5>
               <div class="star">
                 <i class="fas fa-star"></i>
@@ -208,7 +241,7 @@
           <div class="pro">
             <img src="../images/f6.jpg" alt="Earbuds" />
             <div class="des">
-              <span>Electronic</span>
+              <span class="category">Electronic</span>
               <h5>Oraimo Earbuds with NC</h5>
               <div class="star">
                 <i class="fas fa-star"></i>
@@ -220,7 +253,7 @@
           <div class="pro">
             <img src="../images/f8.jpg" alt="Coffee maker" />
             <div class="des">
-              <span>Kitchen</span>
+              <span class="category">Kitchen</span>
               <h5>Elestric Coffee Maker</h5>
               <div class="star">
                 <i class="fas fa-star"></i>
@@ -232,7 +265,7 @@
           <div class="pro">
             <img src="../images/headphone.jpg" alt="Headphone" />
             <div class="des">
-              <span>Electronic</span>
+              <span class="category">Electronic</span>
               <h5>Sony WH-1000XM4 Wireless</h5>
               <div class="star">
                 <i class="fas fa-star"></i>
@@ -240,10 +273,10 @@
               <h4>$70</h4>
             </div>
             <a href="#"><i class="fas fa-shopping-cart"></i></a>
-          </div>                             
-      </div>
-    </section>
-  </main>
+          </div>
+        </div>
+      </section>
+    </main>
     <!-- Footer -->
     <footer class="section-p1">
       <div class="col">

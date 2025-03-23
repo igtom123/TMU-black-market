@@ -1,26 +1,83 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="device=width-device">
-        <link rel="stylesheet" href="styles.css">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/styles.css" media="screen" />
+    <title>Sign Up - TMU Black Market</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <div class="container">
+        <a href="#" class="logo">
+          <img
+            src="../images/original-45a3c273b284f96c3a8925476a654aca.png"
+            alt="TMU Black Market Logo"
+            style="height: 50px; background-color: #e3f6fe"
+          />
+        </a>
+        <nav>
+          <ul id="navbar" aria-label="Main Navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-    </head>
+    <!-- Signup Form -->
+    <section id="signup" class="section-p1">
+      <div class="container">
+        <h2>Create an Account</h2>
+        <form id="signup-form">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Enter your full name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Enter your email address"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              placeholder="Create a password"
+            />
+          </div>
+          <button type="submit" class="btn-primary">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Log in here</a>.</p>
+      </div>
+    </section>
 
-    <body>
+    <!-- Footer -->
+    <footer class="section-p1">
+      <div class="col">
+        <p>&copy; 2023 Group 4</p>
+      </div>
+    </footer>
 
-        <div class="wrapper">
-            <h1>TMU BLACK MARKET</h1>
-            <h5>where product meets standard</h5>
-            <div class="signup">
-                    <input type="text" placeholder="please enter your adm no"><i class='bx bxs-user'></i><br>
-                    <input type="text" placeholder="create a strong password"><i class='bx bxs-lock-alt'></i><br>
-                    <input type="text" placeholder="confirm password"><i class='bx bxs-lock-alt'></i><br>
-                    <input type="button" value="Login">
-                    <p>Already have an account?<button><a href="tmu.html" target=_blank>Sign in</a></button></p> 
-            </div>
-
-        </div>
-    </body>
+    <script src="../js/script.js"></script>
+  </body>
 </html>

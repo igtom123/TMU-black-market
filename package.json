@@ -1,0 +1,32 @@
+{
+  "name": "tmu_black_market",
+  "version": "1.0.0",
+  "description": "Welcome to our repo This is a school project where we make a web application for a Black Market for students Enjoy your stay",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igtom123/TMU-black-market.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/igtom123/TMU-black-market/issues"
+  },
+  "homepage": "https://github.com/igtom123/TMU-black-market#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.12.2"
+  }
+}
